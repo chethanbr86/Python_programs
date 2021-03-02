@@ -1,0 +1,6 @@
+n = 6
+fact = 0
+
+for i in range(n):
+    fact = n*(i-1)
+print(fact)
