@@ -22,9 +22,16 @@ def split_num(n):
 # print(total)
 
 #otherway
+# def fact(n):
+#     if n > 1:
+#         return n*fact(n-1)    
+#     else:
+#         return 1
+
+#mishmash
 def fact(n):
     if n > 1:
-        return n*fact(n-1)    
+        return reduce(lambda x,y: x*y, range(1,n+1))   
     else:
         return 1
 
