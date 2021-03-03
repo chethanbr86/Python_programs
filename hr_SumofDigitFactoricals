@@ -8,7 +8,14 @@ print(num_list)
 #factorial of each number in list
 fact1 = reduce(lambda x, y: x*y, range(1, num_list[0]+1))
 fact2 = reduce(lambda x, y: x*y, range(1, num_list[1]+1)) 
-print(fact1+fact2)
+total = fact1+fact2
+print(total)
+
+sum = 0
+num_list2 = list(map(int, str(total)))
+for i in num_list2:
+    sum += i
+print(sum)
 
 
 
