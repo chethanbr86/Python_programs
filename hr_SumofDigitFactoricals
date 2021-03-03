@@ -1,0 +1,10 @@
+from functools import reduce
+
+num = 35
+
+num_list = list(map(int, str(num)))
+print(num_list)
+
+#for i in range(len(num_list)):
+fact_list = reduce(lambda x, y: x*y, range(1, num_list[0]+1))
+print(fact_list) 
