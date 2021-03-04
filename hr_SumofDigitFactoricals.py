@@ -17,6 +17,8 @@ from functools import reduce
 def split_num(n):
     return list(map(int, str(n)))
 
+print(split_num(342))
+
 #myway
 # fact1 = reduce(lambda x, y: x*y, range(1, num_list[0]+1))
 # fact2 = reduce(lambda x, y: x*y, range(1, num_list[1]+1)) 
@@ -48,8 +50,22 @@ def fact(n):
 def f(n):
     return sum([fact(k) for k in split_num(n)])    #return sum([fact(k) for k in num_list]) #if myway is used at start
 
-print(f(351))
+print(f(342))
 
+def sf(n):
+    return sum(split_num(n))
 
+print(sf(f(342)))
 
+#credit charlesreid1
+def g(p):
+    n = 1
+    sf_val = sf(n)
+    while sf_val != p:
+        n+=1
+        sf_val = sf(n)
+    return n
+
+def sg(p):
+    return sum(split_num(g(p)))
 
