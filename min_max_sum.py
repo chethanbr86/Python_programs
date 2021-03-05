@@ -8,7 +8,7 @@ def summing(arr):
 
     for i in arr:
         
-        total.append(sum(arr.pop(0))) 
+        total = total + i - i
 
     return total
 
