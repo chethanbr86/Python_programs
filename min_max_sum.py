@@ -6,9 +6,9 @@ arr = [1,3,5,7,9]
 def summing(arr):
     total = 0
     total_del = []
-    for i in range(len(arr+1)):
-        arr[i].pop()
-        total_del = total + arr[i] 
+    for i in arr:
+        arr.pop(0)
+        total_del = total + i 
         print(total)
         print(total_del)
     return total_del
