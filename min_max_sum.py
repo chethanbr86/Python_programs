@@ -1,3 +1,5 @@
+#Unsolved
+
 arr = [1,3,5,7,9]
 
 def miniMaxSum(arr):
@@ -6,7 +8,7 @@ def miniMaxSum(arr):
     for i in arr:
         if i < a:
             a = i
-            total = sum(arr.remove(a))
+        total = sum(arr.pop(a))
     return total
 
 print(miniMaxSum(arr))
