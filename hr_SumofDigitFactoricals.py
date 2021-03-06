@@ -56,16 +56,3 @@ def sf(n):
     return sum(split_num(n))
 
 print(sf(f(342)))
-
-#credit charlesreid1
-def g(p):
-    n = 1
-    sf_val = sf(n)
-    while sf_val != p:
-        n+=1
-        sf_val = sf(n)
-    return n
-
-def sg(p):
-    return sum(split_num(g(p)))
-
