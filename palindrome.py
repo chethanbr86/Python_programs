@@ -1,8 +1,8 @@
 word = input()
-word = word.lower()
+word_lower = word.lower()
 
 palin = word[::-1]
-if palin == word:
+if palin == word_lower:
     print('Palindrome')
 else:
     print('Not a Palindrome')
