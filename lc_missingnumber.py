@@ -14,7 +14,7 @@ def missingNumber(nums):
             for i in range(len(nums)):            
                 if ((i+1) - i) != 1 or (i - (i-1)) != 1:            
                     break
-            return nums[i]-1        
+            return nums[i] if i not in nums else 'no error'        
         else:
             return nums[-1]+1
            
