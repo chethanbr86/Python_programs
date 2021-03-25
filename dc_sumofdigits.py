@@ -7,3 +7,5 @@ for i in l:
             break
 print(i,j)
 
+# See if there are any other solutions
+
