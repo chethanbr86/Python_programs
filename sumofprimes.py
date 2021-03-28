@@ -1,4 +1,4 @@
-n = 5
+n = 9
 
 def prime(p):    
     for i in range(2,p):
