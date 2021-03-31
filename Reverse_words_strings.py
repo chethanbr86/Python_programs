@@ -16,5 +16,6 @@ print(word.split(' '))
 print(''.join(word[::-1])) #or can use for loop like above
 
 # Comment: only difference between 2 types is using split
+#Also you can use reverse key word
 
 
