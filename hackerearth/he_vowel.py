@@ -4,13 +4,13 @@ name4 = 'aeKORONAoiBATCHu'
 
 
 name = [name2,name3,name4]
-vow1 = 'aeiou' #try with list
-vow2 = 'AEIOU'
+vow1 = ['A','E','I','O','U']
+vow2 = ['a','e','i','o','u']
 
 def vowel(name, vow1, vow2):
-    for i in name:
+    for i in range(len(name)):
         # for j in vow:
-        if vow1 in i or vow2 in i:
+        if name[i] in vow1 or name[i] in vow2:  
             return 1
         else:
             return 0
