@@ -1,16 +1,14 @@
+# from geeksforgeeks
+
+my_list = [1,2,3,4,5]
 k = 2
-l = [1, 2, 3, 4, 5]
 
-a = l[0]
-# new = 0
+new_list = []
+for i,x in enumerate(my_list):
+    new_list.append(my_list[(i+3)%len(my_list)])
+print(new_list)
 
-for i in range(len(l)):
-    for i in range(k):
-        if l[i] < a:
-            i = i - 1
-        else:
-            i = i + 1
-
-print(l)
-#not completed
-# https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/
+# Learn how to take input from hackerearth problem
+#1
+#5 2 
+#1 2 3 4 5
