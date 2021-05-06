@@ -12,3 +12,27 @@ print(new_list)
 #1
 #5 2 
 #1 2 3 4 5
+# Required solution to the problem
+# 4 5 1 2 3 not [4,5,1,2,3]
+
+#myway with help
+
+# This is the answer to the above question
+# n = int(input())
+# for i in range(n):
+#     m = list(map(int,input().split()))
+#     my_list = list(map(int,input().split()))
+
+# len_list = m[0]
+# k = m[1]
+
+# new_list = []
+# for i,x in enumerate(my_list):
+#     new_list.append(my_list[(i+(k+1))%len_list])
+
+# print(new_list)
+# # This is how we provide required solution without list
+# print(*new_list, sep = " ")
+
+#Solution Achieved but not according to question page
+# https://www.hackerearth.com/practice/codemonk/
