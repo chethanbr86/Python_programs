@@ -12,12 +12,20 @@
 #1
 #5 2 
 #1 2 3 4 5
+
+#Answer for above question
+# n = int(input())
+# for i in range(n):
+#     m = list(map(int,input().split()))
+#     my_list = list(map(int,input().split()))
 # Required solution to the problem
 # 4 5 1 2 3 not [4,5,1,2,3]
+# If iteration is n=2 then: 
+# 4 5 1 2 3
+# 3 4 5 1 2
 
 #myway with help
 
-# This is the answer to the above question
 n = int(input())
 # for i in range(n):
 m = list(map(int,input().split()))
