@@ -5,7 +5,7 @@
 
 # new_list = []
 # for i,x in enumerate(my_list):
-#     new_list.append(my_list[(i+3)%len(my_list)])
+#     new_list.append(my_list[(i+(k+1))%len(my_list)])
 # print(new_list)
 
 # Learn how to take input from hackerearth problem
