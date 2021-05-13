@@ -11,4 +11,4 @@ for j in enumerate(my_list):
 
 #But since we get solution in tuple, we can do tuple unpacking
 for index, item in enumerate(my_list):
-    print(f'{item} is at index: {index}')
+    print(f'{item} is at the index: {index}')
