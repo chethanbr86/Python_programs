@@ -1,12 +1,12 @@
 # from geeksforgeeks for 1 iteration
 
-# my_list = [1,2,3,4,5]
-# k = 2
+my_list = [1,2,3,4,5]
+k = 2
 
-# new_list = []
-# for i,x in enumerate(my_list):
-#     new_list.append(my_list[(i+(k+1))%len(my_list)])
-# print(new_list)
+new_list = []
+for i,x in enumerate(my_list):
+    new_list.append(my_list[(i+(k+1))%len(my_list)])
+print(new_list)
 #Solution correct for 1 iteration
 
 #Learnings:
@@ -33,19 +33,19 @@
 # 3 4 5 1 2
 
 #myway with help for multiple iterations
-def monk(l,k):
-    new_list = []
-    for i,x in enumerate(my_list):
-        new_list.append(my_list[(i+(k+1))%len_list])
-    return new_list
+# def monk(l,k):
+#     new_list = []
+#     for i,x in enumerate(my_list):
+#         new_list.append(my_list[(i+(k+1))%len_list])
+#     return new_list
 
-n = int(input())
-for i in range(n):
-    len_list,k = map(int,input().split())
-    my_list = list(map(int,input().split()))
+# n = int(input())
+# for i in range(n):
+#     len_list,k = map(int,input().split())
+#     my_list = list(map(int,input().split()))
 
-g = monk(len_list,k)
-print(*g, sep = " ")
+# g = monk(len_list,k)
+# print(*g, sep = " ")
 # Not correct
 
 # Github solution
