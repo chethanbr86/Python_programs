@@ -18,3 +18,26 @@ for i in range(n):
         print("lovely string")
     else:
         print("ugly string")
+
+#myway
+'''
+def vowel(name):    
+    vow = 'aeiou'
+    flag1 = True
+    flag2 = True
+    for i in vow:
+        if i in name:
+            flag1 = True 
+        if i.upper() in name:
+            flag2 = True
+    return flag1 or flag2
+
+m = int(input())
+for i in range(m):
+    name = input()
+    if vowel(name):
+        print('lovely string')
+    else:
+        print('ugly string')
+'''
+#unsolved
