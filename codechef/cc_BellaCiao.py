@@ -9,12 +9,12 @@ for i in range(t):
     Q = x[3]
     
     for i in range(1,D+1):
-        for j in range(1,d+1):
-            if i < j:
+        for j in range(1, d+1): 
+            if i <= j:
                 P = P
-            if i >= j:
+            if i > j:
                 P = P + j*Q
                 
-    print(P)     
-
-                
+    print(P)
+    
+#unsolved
