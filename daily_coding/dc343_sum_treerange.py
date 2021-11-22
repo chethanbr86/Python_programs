@@ -7,3 +7,5 @@ for i in li:
     if i >= ran[0] and i <= ran[1]:
         new_li = new_li + i
 print(new_li)
+
+#need to try with binary search
