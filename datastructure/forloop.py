@@ -10,3 +10,7 @@ for j in range(len(li)):
 for i in range(len(li)):
     for j in range(len(li)):
         print(i, li[i], j, li[j])
+        
+for i in range(len(li)):
+    for j in range(len(li)):
+        print(i, li[i], j, li[j])
