@@ -1,4 +1,3 @@
-'''
 #1. Create a greeting for your program.
 name = input('name? ')
 print("Hello " + name + '. How are you?')
@@ -12,15 +11,6 @@ print("What's your fav pet?" + pet)
 print('Your band name is:\n', pet+name+city)
 #5. Make sure the input cursor shows on a new line, see the example at:
 #   https://band-name-generator-end.appbrewery.repl.run/
-'''
 
-# 2 types of function (input and output)
-# def add(n1, n2):
-#     print(n1 + n2)
-# add(2, 3)
 
-# def add(n1, n2):
-#     return n1 + n2
-# result = add(2, 3)
-# print(result)
 
