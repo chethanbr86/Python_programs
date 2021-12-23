@@ -10,9 +10,13 @@ print(len(two_digit_number))
 
 def dig_split(n):
     if len(n) != 2:
-        print('Please print 2 digit number')
+        return 0
     return list(map(int,str(n)))
 
-print(dig_split(two_digit_number))
+if 0:
+    print('Please print 2 digit number')
+else:
+    print(dig_split(two_digit_number))
+    print(sum(dig_split(two_digit_number)))
 
-print(sum(dig_split(two_digit_number)))
+    #fix this
