@@ -15,7 +15,7 @@ if year%4 == 0 :
 else:
 	print('Not Leap')
 
-'''
+#udemy way
 if year % 4 == 0:
   if year % 100 == 0:
     if year % 400 == 0:
@@ -26,6 +26,6 @@ if year % 4 == 0:
     print("Leap year.")
 else:
   print("Not leap year.")
-'''
+
 
 #tips and tricks: instead of repeating, go for multiple nested
