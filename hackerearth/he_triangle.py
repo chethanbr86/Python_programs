@@ -7,5 +7,5 @@
 
 n = int(input())
 
-def palindrome(n):
+# def palindrome(n):
     
