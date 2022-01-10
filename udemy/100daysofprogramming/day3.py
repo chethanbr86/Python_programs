@@ -5,12 +5,12 @@ print('your input is',way1)
 while way1:
     if way1=='left':
         print('You came to a lake. There is an island in the middle of lake.')
-        way2 = input('Do you wanna wait for boat or swim across: ')
+        way2 = input('Do you wanna wait for boat or swim across: ').lower()
         print('your input is',way2)
         while way2:
             if way2=='wait':
                 print('You arrive at island unharmed. There is a house with 3 doors. One Red, one Yellow and one Blue.')   
-                way3 = input('Which color do you choose?: ')
+                way3 = input('Which color do you choose?: ').lower()
                 print('your input is',way3)     
                 while way3:
                     if way3=='Blue':
@@ -32,7 +32,3 @@ while way1:
     else:
         print('Input must either be left or right.')  
     break
-          
-
-    
-
