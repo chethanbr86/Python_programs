@@ -48,3 +48,28 @@ ran_int = random.randint(1,6)
 ran = random.random()
 print(ran_int,ran)
 
+
+#String to list of strings
+string1="This is Python" 
+print("The actual string:",string1) 
+#converting string1 into a list of strings
+string2=string1.split()
+print("The split string:",string2)
+#applying list method to the individual elements of the list string1
+list1=list(map(list,string2)) 
+#printing the resultant list of lists
+print("Converted to list of character list :\n",list1)
+#printing to indivisual list of characters
+list2 = list(string1)
+print(list2)
+
+#string with integers sepated by spaces
+string1="1 2 3 4 5 6 7 8"
+print("Actual String containing integers: ",string1)
+print("Type of string: ",type(string1)) 
+#coverting the string into list of strings
+list1=list(string1.split())
+print("Converted string to list : ",list1) 
+#typecasting the individual elements of the string list into integer using the map() method
+list2=list(map(int,list1))
+print("List of integers : ",list2)
