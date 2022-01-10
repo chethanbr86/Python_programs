@@ -13,11 +13,11 @@ while way1:
                 way3 = input('Which color do you choose?: ').lower()
                 print('your input is',way3)     
                 while way3:
-                    if way3=='Blue':
+                    if way3=='blue':
                         print('You enter a romm of Beasts. Game Over!')
-                    elif way3=='Red':
+                    elif way3=='red':
                         print('You enter a romm of Ghouls. Game Over!')
-                    elif way3=='Yellow':
+                    elif way3=='yellow':
                         print('You Won!')
                     else:
                         print('Select either of 3 gems.')
