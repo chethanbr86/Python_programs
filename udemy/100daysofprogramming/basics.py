@@ -43,3 +43,8 @@ print(result)
 
 print('hello world \n hello world!')
 
+import random
+ran_int = random.randint(1,6)
+ran = random.random()
+print(ran_int,ran)
+
