@@ -6,11 +6,12 @@ def gcd(a,b):
     if a == b:
         return a
     if a > b:
-        return gcd(a-b, b)
-    return gcd(a, b-a)
+        return gcd(a%b, b)
+    return gcd(a, b%a)
 
-a = 10
-b = 15
+inp = input()
+a,b = map(int,inp.split(',')) #imp
+print(a,b,type(a),type(b))
 if gcd(a,b):
     print('GCD of ', a, 'and', b, 'is', gcd(a,b))
 else:
