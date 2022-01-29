@@ -9,8 +9,8 @@ position = input("Where do you want to put the treasure? ")
 #Write your code below this row 👇
 horizontal = int(position[0])
 vertical = int(position[1])
-print(map[horizontal])
-print(map[vertical])
+print(map[horizontal-1])
+print(map[vertical-1])
 
 
 #Write your code above this row 👆
