@@ -10,9 +10,12 @@ position = input("Where do you want to put the treasure? ")
 #Write your code below this row 👇
 horizontal = int(position[0]) #this is an example of taking inputs without split or giving inputs without comma
 vertical = int(position[1])
-selected_row = cap[vertical-1]
-selected_row[horizontal-1] = "X"
 
+# selected_row = cap[vertical-1]
+# selected_row[horizontal-1] = "X"
+
+#Instead of above 2 lines
+cap[vertical-1][horizontal-1] = "X"
 
 #Write your code above this row 👆
 
