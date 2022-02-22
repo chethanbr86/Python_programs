@@ -27,6 +27,11 @@ def addNum(l1,l2):
     for i in range(len(l1)):
         total.append(l1[i]+l2[i])
     return total
+#in both cases what if l1 == l2?
+#And how to know whats the len of linked list to split input and defferentiate between l1 and l2
 
+# l1 = list(map(int,input().split(',')))
+# l2 = list(map(int,input().split(',')))
+# print(l1)
 print(addNum(l1,l2))
 
