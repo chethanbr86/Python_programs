@@ -5,6 +5,8 @@ for i in range(t):
     l1 = x[0]
     l2 = x[1]
     print(t,x,l1,l2)
+    # for i in range(len(x)):
+    #     print(x[i])
     
     new_list=[]
     for i in range(l1,l2+1):
