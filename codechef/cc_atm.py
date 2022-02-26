@@ -1,3 +1,9 @@
+# 2 #total 2 cycles of inputs
+# 5 10 #1st cycle stored in variables
+# 3 5 3 2 1 #1st cycle accessing directly
+# 4 6 #2nd cycle same as above
+# 10 8 6 4 2nd cycle same as above
+
 t = int(input())
 for i in range(t):
     x = list(map(int,input().split())) 
