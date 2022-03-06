@@ -1,4 +1,5 @@
 # https://practice.geeksforgeeks.org/contest/gfg-mega-contest-qualification-round/problems/#
+from itertools import count
 t = int(input())
 for i in range(t):
     x = list(map(int,input().split()))
@@ -39,6 +40,8 @@ for i in range(t):
         print(split(x), ' is not a special numnber')
 
     #Need to print special numbers in range of split(x)
+    for m in range(split(x)+1):
+        pass
 
         
 
