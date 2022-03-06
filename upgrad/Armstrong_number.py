@@ -2,6 +2,7 @@
 num = 153
 
 #converting input into a list 
+print(type(num))
 num_list = list(map(int,str(num)))
 
 #Cubing each number
