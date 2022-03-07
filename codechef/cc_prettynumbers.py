@@ -2,6 +2,7 @@
 t = int(input())
 for i in range(t):
     x = list(map(int,input().split())) #For a split like this, space is the separator
+    # x = [int(x) for x in input("Enter multiple values: ").split()] #this is another way
     l1 = x[0]
     l2 = x[1]
     print(t,x,l1,l2)

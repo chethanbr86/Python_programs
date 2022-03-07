@@ -1,1 +1,0 @@
-press alt + ` (above tab) to open notes.txt.
