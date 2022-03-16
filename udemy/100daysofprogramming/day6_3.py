@@ -4,8 +4,7 @@ def mov():
     turn_left()
     turn_left()
 
-def jump():    
-    
+def jump():       
     turn_left()
     move()
     mov()
