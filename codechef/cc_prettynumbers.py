@@ -5,7 +5,7 @@ for i in range(t):
     # x = [int(x) for x in input("Enter multiple values: ").split()] #this is another way
     l1 = x[0]
     l2 = x[1]
-    print(t,x,l1,l2)
+    # print(t,x,l1,l2)
     # for i in range(len(x)):
     #     print(x[i])
     
