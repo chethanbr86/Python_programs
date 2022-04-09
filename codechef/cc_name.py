@@ -19,10 +19,13 @@ def total_len(df):
 # print(total_len(parents))
 # print(total_len(children))
 
-par_spell = chain.from_iterable([parents])
-
-
-print(par_spell)
+par_spell = ''
+for i in parents:
+    par = []
+    for j in i:
+        # par_spell += j
+        par.append(j)
+    print(par)
 
 # if total_len(parents) <= total_len(children):
 #     print('NO')
