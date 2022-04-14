@@ -31,9 +31,10 @@ for i in parents:
 # alpha = list(chain.from_iterable(par_spell))
 #or
 alpha = [j for i in par_spell for j in i]
-# print(alpha)
+print(alpha)
 
 # if total_len(parents) <= total_len(children):
 #     print('NO')
 # else:
+#     for i in 
     
