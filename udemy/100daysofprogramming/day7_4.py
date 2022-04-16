@@ -1,4 +1,63 @@
 import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
 word_list = ["ardvark", "baboon", "camel"]
 
 chosen_word = random.choice(word_list)
@@ -22,5 +81,5 @@ while '_' in display: #myway
             display[i] = chosen_word[i] #or display[i] = guess
             print('correct')
         else:
-            print('wrong')
+            print(stages.pop())
     print(display)
