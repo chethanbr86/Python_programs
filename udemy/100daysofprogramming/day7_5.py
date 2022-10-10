@@ -1,4 +1,15 @@
 import random
+from words import word_list
+
+logo = ''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
 
 stages = ['''
   +---+
@@ -58,8 +69,9 @@ stages = ['''
 =========
 ''']
 
+print(logo)
 #myexplanation: There has to be 7 lives because of 7 drawings and lives not dependent on length of word
-word_list = ["ardvark", "baboon", "camel"]
+# word_list = ["ardvark", "baboon", "camel"]
 
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
 #Set 'lives' to equal 6.
@@ -102,4 +114,3 @@ while not end_of_game:
 #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
     print(stages[lives])
 
-#There is a bug in this which is addressed in day7_5.py
