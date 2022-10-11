@@ -1,73 +1,6 @@
 import random
 from words import word_list
-
-logo = ''' 
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/    '''
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+from art import logo, stages
 
 print(logo)
 #myexplanation: There has to be 7 lives because of 7 drawings and lives not dependent on length of word
@@ -79,7 +12,6 @@ end_of_game = False
 lives = 6
 
 chosen_word = random.choice(word_list)
-print(chosen_word)
 
 display = []
 for i in chosen_word:
@@ -92,16 +24,21 @@ for i in chosen_word:
 # while '_' in display: #myway #myexp: if you use this, u can use break along with end_of_game else with another while statement break is not required
 while not end_of_game:
     guess = input().lower()
+
+    if guess in display:
+        print(f"You've already guessed {guess}")
+    
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             display[i] = chosen_word[i] #or display[i] = guess     
-    if guess not in chosen_word:
+    if guess not in chosen_word or len(guess) != 1:
     # else: #else wont work here only if does
       lives -= 1
-      print('You have:', lives, 'lives left!')
+      print('Wrong! You have:', lives, 'lives left!')
       if lives == 0:
         end_of_game = True #myexplanation: This is like a flag statement instead of break
         print('You Lost!!')
+        print('The word chosen was: ', chosen_word)
         # break   #myexplanation: Here break takes while loop exit and prints both print statements. Hence we need to try udemy way end_of_game
     print(display)
     
@@ -109,6 +46,7 @@ while not end_of_game:
     if '_' not in display:
       end_of_game = True
       print('You Won!!!')
+      print('The word chosen was: ', chosen_word)
         
 
 #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
