@@ -20,3 +20,4 @@ for i in range(t):
             print(1, end='')
         else:
             print(0, end='')
+
