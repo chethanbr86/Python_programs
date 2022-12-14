@@ -9,9 +9,10 @@
 
 t = int(input())
 for i in range(t):
-    x = list(map(int,input().split())) 
-    no_of_person = x[0]
-    money_units = x[1]
+    # x = list(map(int,input().split())) 
+    # no_of_person = x[0]
+    # money_units = x[1]
+    no_of_person, money_units = list(map(int,input().split())) #check
     withdraw = list(map(int,input().split()))
     for j in withdraw: #this is a way of taking input but not storing in any variables but directly accessing from list
         if j <= money_units:
