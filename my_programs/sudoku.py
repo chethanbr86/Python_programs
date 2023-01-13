@@ -14,10 +14,10 @@ map = [row1, row2, row3, row4, row5, row6, row7, row8, row9]
 position = input("Where do you want to put the treasure? ")
 number = int(input('Which number do you want to fill? '))
 
-horizontal = int(position[0]) #this is an example of taking inputs without split or giving inputs without comma
+horizontal = int(position[0]) 
 vertical = int(position[1])
 
-if map[vertical-1][horizontal-1] == 0:
+if map[vertical-1][horizontal-1] == 0: #if if doesn't work, use for loop or while loop
     map[vertical-1][horizontal-1] = number
 else:
     print('position is already filled')
