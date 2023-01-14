@@ -59,5 +59,3 @@ while not end_of_game:
     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
     from art import stages
     print(stages[lives])
-
-#Same problem as mine with udemy way
