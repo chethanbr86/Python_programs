@@ -4,6 +4,7 @@ from art import logo, stages
 # from replit import clear
 
 print(logo)
+print('Guess a letter')
 
 end_of_game = False
 lives = 6
@@ -31,10 +32,10 @@ while not end_of_game:
             display[i] = chosen_word[i] #or display[i] = guess     
     if guess not in chosen_word or len(guess) > 1:
     # else: #else wont work here only if does
-      lives -= 1
-      print(f'Wrong! You have: {lives} lives left!')
-      if lives == 0:
-        end_of_game = True #myexplanation: This is like a flag statement instead of break
+        lives -= 1
+        print(f'Wrong! You have: {lives} lives left!')
+        if lives == 0:
+            end_of_game = True #myexplanation: This is like a flag statement instead of break
         print('You Lost!!')
         print(f'The word chosen was: {chosen_word}')
         # break   #myexplanation: Here break takes while loop exit and prints both print statements. Hence we need to try udemy way end_of_game
@@ -42,11 +43,13 @@ while not end_of_game:
     
     
     if '_' not in display:
-      end_of_game = True
-      print('You Won!!!')
-      print(f'The word chosen was: {chosen_word}')
+        end_of_game = True
+        print('You Won!!!')
+        print(f'The word chosen was: {chosen_word}')
         
 
 #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
     print(stages[lives])
+
+#problem i saw was, t entering multiple lives lost lives but not r
 

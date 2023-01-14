@@ -29,24 +29,27 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 password_gen = []
+# password_gen = ''
 for i in range(1,nr_letters+1):
     password_gen.append(random.choice(letters))
+    # password_gen = password_gen + random.choice(letters)
 
 for j in range(1,nr_symbols+1):
     password_gen.append(random.choice(symbols))
+    # password_gen = password_gen + random.choice(symbols)
 
 for j in range(1,nr_numbers+1):
     password_gen.append(random.choice(numbers))
+    # password_gen = password_gen + random.choice(numbers)
 
 print(password_gen)
 random.shuffle(password_gen)
 print(password_gen)
-print(','.join(password_gen))
-#instead of join, we can use for loop
-# passw = ''
-# for i in password_gen:
-#     passw += i
-# print(passw)
+
+passw = ''
+for i in password_gen:
+    passw += i
+print(passw)
 
 #myway
 #Instead of above method, we can use regular expressions 

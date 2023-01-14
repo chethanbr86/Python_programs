@@ -22,7 +22,7 @@ while '_' in display: #myway
     guess = input().lower()
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
-            display[i] = chosen_word[i] #or display[i] = guess     
+            display[i] = chosen_word[i] #or display[i] = guess    
     print(display)
 print('You Won!')
     # if '_' not in display:
