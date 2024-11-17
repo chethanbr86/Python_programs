@@ -2,9 +2,9 @@
 
 def bool_to_word(boolean):
     if boolean == True:
-        print('Yes')
-    else:
-        print('No')
+        return 'Yes' #its working now as print is changed to return
+    # else:
+    return 'No'
         
-bool_to_word(True)
-bool_to_word(False)
+print(bool_to_word(True))
+print(bool_to_word(False))
