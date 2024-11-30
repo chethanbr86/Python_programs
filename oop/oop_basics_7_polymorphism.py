@@ -26,8 +26,22 @@ class Triangle(Shape):
 
     def Area(self):
         return 0.5 * self.height * self.width
+    
+# class Pizza:
+#     def __init__(self, radius, topping):
+#         self.radius = radius
+#         self.topping = topping
 
-shapes = [Circle(4), Square(5), Triangle(6,7)]
+#Pizza by itself will give error as it does not have area method, so changing the above code as below
+
+class Pizza(Circle):
+    def __init__(self, radius, topping):
+        super().__init__(radius)
+        self.topping = topping
+
+#Pizza now inherits from circle class and gives area
+
+shapes = [Circle(4), Square(5), Triangle(6,7), Pizza(8,'Pepperoni')]
 
 for shape in shapes:
     print(shape.Area())
