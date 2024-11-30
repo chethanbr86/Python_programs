@@ -8,8 +8,9 @@ class Student:
         self.age = age #self refers to the object currently working with
         Student.num_students += 1 #incrementing class variable #If we are modifying class variable then use class name in place of self as shown
 
-    def room(self, no_room): #This function is called method
-        self.no_room = 5
+    def Room(self, no_room): #This function is called method
+        self.no_room = no_room
+        return f'{self.name} is in room {self.no_room}'
 
 student1 = Student("Michael", 30) #object
 student2 = Student("Lincoln", 32)
@@ -22,3 +23,6 @@ print(student1.name)
 print(student1.class_year)  #accessing from instance variable
 #or 
 print(Student.class_year)  #accessing from class name
+
+room = student1.Room(101)
+print(room) 
