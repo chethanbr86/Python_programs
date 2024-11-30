@@ -45,4 +45,4 @@ print('Catcher' in book2) #dunder contains
 print(book1['title']) #gives error and hence getitem dunder
 print(book1['author'])
 print(book1['num_pages'])
-print(book1['Hero'])
+print(book1['name'])
