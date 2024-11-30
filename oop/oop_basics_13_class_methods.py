@@ -32,5 +32,6 @@ student2 = Student("Lincoln", 3.6)
 student3 = Student("Sucre", 4.0)
 student4 = Student("T-bag", 1.8)
     
+print(student1.get_info()) #since get_info is not class method, we can't call by class name
 print(Student.get_count())
 print(Student.get_average_gpa())

@@ -4,7 +4,7 @@ class Student:
     num_students = 0 #class variable
 
     def __init__(self, name, age): #name and age are arguments and this whole funtion is called constructor
-        self.name = name #instance variable
+        self.name = name #instance variable #self.name is same as Student.name
         self.age = age #self refers to the object currently working with
         Student.num_students += 1 #incrementing class variable #If we are modifying class variable then use class name in place of self as shown
 
