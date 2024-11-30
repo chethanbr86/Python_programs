@@ -20,7 +20,7 @@ student4 = Student("T-bag", 40)
 print(f'Graduating class of prison break {Student.class_year} has {Student.num_students} students')
 print(student1.name)
 
-print(student1.class_year)  #accessing from instance variable
+print(student1.class_year)  #accessing from instance variable. Class variable can also be accessed from instance variable
 #or 
 print(Student.class_year)  #accessing from class name
 

@@ -15,7 +15,7 @@ class Car:
         return f"Total number of cars: {cls.total_cars}"
     
     def get_details(self, some_car):
-        return f"Model: {self.model}, Year: {self.year}, Color: {self.color}, For Sale: {self.for_sale}, and this is {some_car}"
+        return f"Model: {self.model}, Year: {self.year}, Color: {self.color}, For Sale: {self.for_sale}, and this is {some_car}, total cars: {Car.total_cars}"
 
 car1 = Car("Toyota", 2020, "Red", True)
 car2 = Car("Honda", 2019, "Blue", False)

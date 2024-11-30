@@ -1,5 +1,5 @@
 class Animal:
-    no_of_animals = 3
+    no_of_animals = 0
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -20,8 +20,8 @@ class Dog(Animal): #Dog class inheriting attributes and methods of parent class 
         print('Woof')
 
 class Cat(Animal): #Cat class inheriting attributes and methods of parent class Animal
-    no_of_cats = 5
-    def total():
+    no_of_cats = 0
+    def total(self):
         Cat.no_of_cats += 1
 
 cat1 = Cat('Furry', 4) #object
