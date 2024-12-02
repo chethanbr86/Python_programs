@@ -1,0 +1,7 @@
+nb = 10
+ne = 4
+
+total_consumed = 10
+total_empty = 10
+remaining = 10//4 = 2
+tradable = 
