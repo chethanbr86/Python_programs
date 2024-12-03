@@ -1,7 +1,8 @@
 nb = 10
 ne = 4
 
-total_consumed = 10
 total_empty = 10
-remaining = 10%4 = 2
-tradable = 
+untradeable = 10%4 = 2
+tradable = total_empty - untradeable
+if tradable > ne:
+    nb += 1
