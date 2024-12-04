@@ -1,8 +1,8 @@
-nb = 10
+nb = 11
 ne = 4
 
-total_empty = 10
-untradeable = 10%4 = 2
-tradable = total_empty - untradeable
-if tradable > ne:
-    nb += 1
+total_empty = 11
+untradeable = 11%4 = 3
+tradable = total_empty - untradeable = 11-3 = 8
+receivable = tradable//ne = 8//4 = 2
+nb = 
