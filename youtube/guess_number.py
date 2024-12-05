@@ -28,13 +28,14 @@ import random
 #         break  # Exit the loop if input is valid
 #     except ValueError:
 #         print("Error: That's not a valid number. Please enter an integer.")
-
+guesses = 0
 while True:
+    guesses += 1
     user_input = input("Enter a number between 0 and 10: ")
 
     if user_input.isdigit():        
         user_input = int(user_input)
-        if user_input >= 0 and user_input <= 10:
+        if user_input > -1 and user_input <= 10:
             print("Let's Play!")
         else:
             print('should be between 0 and 10')
@@ -43,11 +44,15 @@ while True:
         print('only digits allowed')
         continue
 
-    computer_gen = random.randrange(0,11)
+    computer_gen = random.randrange(0,11) #the range 11 can be replaced with user_input if you want to go in a direction of computer generated number
     print(f'Computer input: {computer_gen}')
 
     if user_input == computer_gen:
         print(f"user_input: {user_input} and computer_gen: {computer_gen} are matching.")
         break
+    elif user_input > computer_gen:
+        print(f"user_input: {user_input} was greater than computer_gen: {computer_gen}!")
     else:
-        print(f"user_input: {user_input} and computer_gen: {computer_gen} are not matching!")
+        print(f"user_input: {user_input} was lesser than computer_gen: {computer_gen}!")
+
+print(f'You made {guesses} guesses!')
