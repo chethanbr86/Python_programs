@@ -2,7 +2,7 @@
 
 from above_Average import sumoflist
 
-my_list = [[2,4,6,8,10,12], [6.5,7.5]]
+my_list = [[2,4,6,8,10,12], [8.5,7.5,5.5]]
 m = my_list[0]
 n = my_list[1]
 

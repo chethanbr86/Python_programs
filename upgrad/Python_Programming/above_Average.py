@@ -6,11 +6,11 @@ n = my_list[1]
 
 #1st time
 
-# def sumoflist(m):
-#     total = 0
-#     for i in m:
-#         total = total + i
-#     return total
+def sumoflist(m):
+    total = 0
+    for i in m:
+        total = total + i
+    return total
 
 # # avg = sum(m)/len(m)
     
