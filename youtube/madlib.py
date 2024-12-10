@@ -15,6 +15,6 @@
 # print(story)
 
 #youtube way
-with open('story.txt', 'r') as f:
+with open('story_madlib.txt', 'r') as f:
     story = f.read()
 
