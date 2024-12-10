@@ -1,2 +1,3 @@
 tqdm and trange
-rich library
+rich
+polars
