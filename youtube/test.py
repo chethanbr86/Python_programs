@@ -17,4 +17,14 @@
 # database2.append(user_input)
 # print(user_input,database2[-1])
 
+import random
+def Slot_Machine():
+    inp1 = random.randint(1,3)
+    inp2 = random.randint(1,3)
+    inp3 = random.randint(1,3)
+    return inp1,inp2,inp3
+
+print(Slot_Machine())
+
+
     

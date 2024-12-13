@@ -22,8 +22,8 @@ for i in range(total_problems):
         guess = input("Problem #" + str(i+1) + ": " + expr + " = ")
         if guess == str(answer):
             score += 1
-            print(f'1: {score}')
-            break
+            print(f'Score after {i+1} questions: {score} and ans is: {answer}')
+            break 
         score -= 1
 
 end_timme = time.time()
