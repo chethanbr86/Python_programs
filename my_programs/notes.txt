@@ -1,3 +1,4 @@
 tqdm and trange
 rich
 polars
+uv
