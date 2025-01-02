@@ -1,5 +1,5 @@
 #1st method:
-""" from functools import reduce
+from functools import reduce
 
 n = 5
 
@@ -8,11 +8,11 @@ if n < 0:
 elif n==0:
     print(1)
 else:
-    fact = reduce(lambda x,y: x*y, range(1,n+1))
-    print(fact) """
+    fact0 = reduce(lambda x,y: x*y, range(1,n+1))
+    print(fact0) 
 
 #2nd method:
-""" def fact(n):
+def fact1(n):
     f = 1
     if n < 0:
         return -1
@@ -23,18 +23,18 @@ else:
             f = f * i
         return f
 
-print(fact(5)) """
+print(fact1(5)) 
 
 #3rd method:
-def fact(n):
+def fact2(n):
     f = 1
     if n < 0:
         return -1
     elif n==0:
         return 1
     else:
-        f = n* fact(n-1)
+        f = n* fact2(n-1)
         return f
 
-print(fact(5))
+print(fact2(5))
         
