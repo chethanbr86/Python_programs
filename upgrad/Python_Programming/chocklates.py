@@ -3,8 +3,8 @@ you will get new chocolate for free. If Sanjay has m Rupees.
 How many chocolates will he be able to eat if each chocolate costs c Rupees?'''
 
 # 1st way:
-m = int(input()) #No of rupees Sanjay has
-c = int(input()) #Cost of each chocklate
+# m = int(input()) #No of rupees Sanjay has
+# c = int(input()) #Cost of each chocklate
 
 # Taking 2 inputs at once
 x = input()
