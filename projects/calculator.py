@@ -10,6 +10,8 @@ class calculator:
         return num1 * num2
     
     def f_div(num1, num2):
+        if num2 == 0:
+            print('Number not divisible by 0')
         return num1 // num2
     
 # print(calculator.f_add(15,6))
@@ -24,10 +26,10 @@ class calculator:
 #     num2 = n[1]
 
 while True:
-    user_inp = input('Enter 2 numbers or press q: ')
+    user_inp = input('Enter 2 numbers or press q to exit: ')
     if user_inp != 'q':
         num1 = int(input())
-        num2 = int(input())
+        num2 = int(input()) #need to do loop for digit and alphabet validation
     
         user_input = input('If you want to add press a, to substract press s, to multiply press m, to divide press d, to exit press e: ')
         if user_input == 'e':
