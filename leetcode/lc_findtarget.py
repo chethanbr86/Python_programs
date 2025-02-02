@@ -17,17 +17,17 @@
 
 def search(numbs, target):
     left = 0
-    right = len(nums)-1
+    right = len(numbs)-1
     while left <= right:
         middle = left + (right-left)//2
-        if nums[middle] == target:
+        if numbs[middle] == target:
             return middle
-        if target < nums[middle]:
+        if target < numbs[middle]:
             right = middle - 1
         else:
             left = middle + 1
     return -1
 
-nums = [-1,0,3,5,9,12]
+numbs = [-1,0,3,5,9,12]
 target = 9             
-print(search(nums, target))
+print(search(numbs, target))
