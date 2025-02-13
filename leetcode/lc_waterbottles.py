@@ -1,12 +1,18 @@
-numBottles = 15
-numExchange = 4
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        self.numBottles = numBottles
+        self.numExchange = numExchange
 
-total_full = numBottles
-total_exchange = numBottles
+        total_full = numBottles
+        total_exchange = numBottles
 
-while total_exchange >= numExchange:    
-    new_bottles = total_exchange // numExchange
-    total_full = total_full + new_bottles
-    total_exchange = new_bottles + (total_exchange % numExchange)
+        while total_exchange >= numExchange:    
+            # new_bottles = total_exchange // numExchange
+            total_full = total_full + (total_exchange // numExchange)
+            total_exchange = (total_exchange // numExchange) + (total_exchange % numExchange) #i was taking total_full in numerator instead of total_exchange
 
-print(total_full)
+        return total_full
+    
+solution = Solution()
+result = solution.numWaterBottles(15,4)
+print(result)
