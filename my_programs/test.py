@@ -6,14 +6,32 @@
 # print(bank_balances.items())
 # #debug in thonny
 
-numbers = input("Enter numbers separated by space: ").split()
-numbers = [int(x) for x in numbers]
-print(numbers)
+# numbers = input("Enter numbers separated by space: ").split()
+# numbers = [int(x) for x in numbers]
+# print(numbers)
 
-my_list = [1]
-size = 0
+# my_list = [1]
+# size = 0
 
-my_list.append(my_list[size]*numbers)
-size += 1
+# my_list.append(my_list[size]*numbers)
+# size += 1
 
-print(my_list)
+# print(my_list)
+
+class PrefixProduct:
+    def __init__(self):
+        self.prefix_product = [1]  # Initialize with 1 to handle the first product
+        self.size = 0
+
+    def append(self, num):
+        new_product = self.prefix_product[self.size] * num
+        self.prefix_product.append(new_product)
+        self.size += 1
+        print(self.prefix_product)
+
+# Example usage
+pp = PrefixProduct()
+pp.append(2)  # prefix_product becomes [1, 2]
+pp.append(3)  # prefix_product becomes [1, 2, 6]
+pp.append(4)  # prefix_product becomes [1, 2, 6, 24]
+pp.append(5)  # prefix_product becomes [1, 2, 6, 24, 120]
