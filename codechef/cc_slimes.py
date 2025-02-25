@@ -19,15 +19,16 @@ print(list_a)
 for i in list_a:
     # max_element = i[0]
     for j in range(len(i)-1):
-        if i[j] > i[j+1]:
-            i[j] - i[j+1]
-            i.remove(i[j+1])
+        print(f'1:{i[j]}, 2:{i[j+1]}, 3:{j}, 4:{j+1}, 5:{i[j-1]}, 6:{j-1}')
+        # if i[j] > i[j+1]:
+        #     i[j] - i[j+1]
+        #     i.remove(i[j+1])
         # else:            
         #     j[1] - j[0]
         #     i.remove(j[1])
     # print(max_element)
 
-print(list_a)
+# print(list_a)
 
 #not completed
         
