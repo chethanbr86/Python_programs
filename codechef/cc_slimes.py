@@ -78,45 +78,163 @@
 #     print(tiss)
 
 # Decoding codechef sol in myway
+# def list_slime(a):
+#     target_value = 0
+#     for i in range(len(a)):
+#         first_value = a[i]
+#         target_index = 0
+
+#         if i > 0:
+#             target_index = a[i-1] 
+#             for j in range(i-2,-1,-1):
+#                 k = max(0, target_index-a[j])
+#                 l = max(0, a[j] - target_index)
+#                 target_index = min(k,l)
+
+#         if i > 0:
+#             k = max(0, first_value - target_index)
+#             l = max(0, target_index - first_value)
+#             first_value = max(k,l)
+
+#         m = 0
+#         if i < len(a) - 1:
+#             m = a[i+1]
+#             for j in range(i+2, len(a)):
+#                 k = max(0, m - a[j])
+#                 l = max(0, a[j] - m)
+#                 m = min(k,l)
+
+#         if i < len(a) - 1:
+#             k = max(0, first_value - m)
+#             l = max(0, m - first_value)
+#             first_value = max(k,l)
+
+#         if first_value > target_value:
+#             target_value = first_value
+
+#     return target_value
+
+# t = int(input())
+# for i in range(t):
+#     n = int(input())
+#     a = list(map(int,input().split()))
+#     new_list = list_slime(a)
+#     print(new_list)
+
+# def list_slime(a):
+#     n = len(a)
+#     if n == 1:
+#         return a[0]  # Only one element, return it directly
+
+#     # Left modification (prefix min-reduction)
+#     left = [0] * n
+#     left[0] = a[0]
+#     for i in range(1, n):
+#         diff = abs(left[i-1] - a[i])
+#         left[i] = max(0, min(left[i-1], diff))
+
+#     # Right modification (suffix min-reduction)
+#     right = [0] * n
+#     right[-1] = a[-1]
+#     for i in range(n-2, -1, -1):
+#         diff = abs(right[i+1] - a[i])
+#         right[i] = max(0, min(right[i+1], diff))
+
+#     # Find max possible first_value by combining both sides
+#     max_value = 0
+#     for i in range(n):
+#         first_value = a[i]
+#         if i > 0:
+#             first_value = max(first_value, abs(first_value - left[i-1]))
+#         if i < n - 1:
+#             first_value = max(first_value, abs(first_value - right[i+1]))
+#         max_value = max(max_value, first_value)
+
+#     return max_value
+
+
+# # Reading input
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     a = list(map(int, input().split()))
+#     print(list_slime(a))
+
+#Chatgpt optimized solution 1
+# def list_slime(a):
+#     n = len(a)
+#     target_value = 0
+
+#     # Left prefix array to track reductions
+#     left_min = [0] * n
+#     if n > 1:
+#         left_min[0] = a[0]
+#         for i in range(1, n):
+#             left_min[i] = min(left_min[i-1], abs(left_min[i-1] - a[i]))
+
+#     # Right suffix array to track reductions
+#     right_min = [0] * n
+#     if n > 1:
+#         right_min[-1] = a[-1]
+#         for i in range(n-2, -1, -1):
+#             right_min[i] = min(right_min[i+1], abs(right_min[i+1] - a[i]))
+
+#     # Compute the maximum value by combining left and right reductions
+#     for i in range(n):
+#         first_value = a[i]
+
+#         # Adjust based on left-side values
+#         if i > 0:
+#             first_value = max(0, abs(first_value - left_min[i-1]))
+
+#         # Adjust based on right-side values
+#         if i < n-1:
+#             first_value = max(0, abs(first_value - right_min[i+1]))
+
+#         # Track the maximum possible first_value
+#         target_value = max(target_value, first_value)
+
+#     return target_value
+
+# # Reading input
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     a = list(map(int, input().split()))
+#     print(list_slime(a))
+
+#chatgpt optimized solution 2
 def list_slime(a):
-    target_value = 0
-    for i in range(len(a)):
+    n = len(a)
+    max_result = 0
+
+    for i in range(n):
         first_value = a[i]
-        target_index = 0
 
+        # Calculate left modification
         if i > 0:
-            target_index = a[i-1] 
-            for j in range(i-2,-1,-1):
-                k = max(0, target_index-a[j])
-                l = max(0, a[j] - target_index)
-                target_index = min(k,l)
+            target_index = a[i - 1]
+            for j in range(i - 2, -1, -1):
+                target_index = max(0, min(target_index - a[j], a[j] - target_index))
+            first_value = max(0, max(first_value - target_index, target_index - first_value))
 
-        if i > 0:
-            k = max(0, first_value - target_index)
-            l = max(0, target_index - first_value)
-            first_value = max(k,l)
+        # Calculate right modification
+        if i < n - 1:
+            m = a[i + 1]
+            for j in range(i + 2, n):
+                m = max(0, min(m - a[j], a[j] - m))
+            first_value = max(0, max(first_value - m, m - first_value))
 
-        m = 0
-        if i < len(a) - 1:
-            m = a[i+1]
-            for j in range(i+2, len(a)):
-                k = max(0, m - a[j])
-                l = max(0, a[j] - m)
-                m = min(k,l)
+        max_result = max(max_result, first_value)
 
-        if i < len(a) - 1:
-            k = max(0, first_value - m)
-            l = max(0, m - first_value)
-            first_value = max(k,l)
+    return max_result
 
-        if first_value > target_value:
-            target_value = first_value
 
-    return target_value
+# Reading input
+t = int(input())  # Number of test cases
+for _ in range(t):
+    n = int(input())  # Size of list
+    a = list(map(int, input().split()))  # Input list
+    print(list_slime(a))
 
-t = int(input())
-for i in range(t):
-    n = int(input())
-    a = list(map(int,input().split()))
-    new_list = list_slime(a)
-    print(new_list)
+#chatgpt solution 1 and 2 optimized to o(n) rather than codechef solution o(n^2)
