@@ -33,8 +33,8 @@
 
 # Making nested list into separate lists
 # for i in range(len(list_a)):
-#     first_value = list_a[i]
-#     print(first_value)
+#     cur_index_value = list_a[i]
+#     print(cur_index_value)
             
 #Codechef solution
 # def electric(incident):
@@ -81,36 +81,36 @@
 # def list_slime(a):
 #     target_value = 0
 #     for i in range(len(a)):
-#         first_value = a[i]
-#         target_index = 0
+#         cur_index_value = a[i]
+#         prev_index_value = 0
 
 #         if i > 0:
-#             target_index = a[i-1] 
+#             prev_index_value = a[i-1] 
 #             for j in range(i-2,-1,-1):
-#                 k = max(0, target_index-a[j])
-#                 l = max(0, a[j] - target_index)
-#                 target_index = min(k,l)
+#                 k = max(0, prev_index_value-a[j])
+#                 l = max(0, a[j] - prev_index_value)
+#                 prev_index_value = min(k,l)
 
 #         if i > 0:
-#             k = max(0, first_value - target_index)
-#             l = max(0, target_index - first_value)
-#             first_value = max(k,l)
+#             k = max(0, cur_index_value - prev_index_value)
+#             l = max(0, prev_index_value - cur_index_value)
+#             cur_index_value = max(k,l)
 
-#         m = 0
+#         next_index_value = 0
 #         if i < len(a) - 1:
-#             m = a[i+1]
+#             next_index_value = a[i+1]
 #             for j in range(i+2, len(a)):
-#                 k = max(0, m - a[j])
-#                 l = max(0, a[j] - m)
-#                 m = min(k,l)
+#                 k = max(0, next_index_value - a[j])
+#                 l = max(0, a[j] - next_index_value)
+#                 next_index_value = min(k,l)
 
 #         if i < len(a) - 1:
-#             k = max(0, first_value - m)
-#             l = max(0, m - first_value)
-#             first_value = max(k,l)
+#             k = max(0, cur_index_value - next_index_value)
+#             l = max(0, next_index_value - cur_index_value)
+#             cur_index_value = max(k,l)
 
-#         if first_value > target_value:
-#             target_value = first_value
+#         if cur_index_value > target_value:
+#             target_value = cur_index_value
 
 #     return target_value
 
@@ -140,15 +140,15 @@
 #         diff = abs(right[i+1] - a[i])
 #         right[i] = max(0, min(right[i+1], diff))
 
-#     # Find max possible first_value by combining both sides
+#     # Find max possible cur_index_value by combining both sides
 #     max_value = 0
 #     for i in range(n):
-#         first_value = a[i]
+#         cur_index_value = a[i]
 #         if i > 0:
-#             first_value = max(first_value, abs(first_value - left[i-1]))
+#             cur_index_value = max(cur_index_value, abs(cur_index_value - left[i-1]))
 #         if i < n - 1:
-#             first_value = max(first_value, abs(first_value - right[i+1]))
-#         max_value = max(max_value, first_value)
+#             cur_index_value = max(cur_index_value, abs(cur_index_value - right[i+1]))
+#         max_value = max(max_value, cur_index_value)
 
 #     return max_value
 
@@ -181,18 +181,18 @@
 
 #     # Compute the maximum value by combining left and right reductions
 #     for i in range(n):
-#         first_value = a[i]
+#         cur_index_value = a[i]
 
 #         # Adjust based on left-side values
 #         if i > 0:
-#             first_value = max(0, abs(first_value - left_min[i-1]))
+#             cur_index_value = max(0, abs(cur_index_value - left_min[i-1]))
 
 #         # Adjust based on right-side values
 #         if i < n-1:
-#             first_value = max(0, abs(first_value - right_min[i+1]))
+#             cur_index_value = max(0, abs(cur_index_value - right_min[i+1]))
 
-#         # Track the maximum possible first_value
-#         target_value = max(target_value, first_value)
+#         # Track the maximum possible cur_index_value
+#         target_value = max(target_value, cur_index_value)
 
 #     return target_value
 
@@ -205,30 +205,29 @@
 
 #chatgpt optimized solution 2
 def list_slime(a):
-    n = len(a)
+    # n = len(a)
     max_result = 0
 
-    for i in range(n):
-        first_value = a[i]
+    for i in range(len(a)):
+        cur_index_value = a[i]
 
         # Calculate left modification
         if i > 0:
-            target_index = a[i - 1]
+            prev_index_value = a[i - 1]
             for j in range(i - 2, -1, -1):
-                target_index = max(0, min(target_index - a[j], a[j] - target_index))
-            first_value = max(0, max(first_value - target_index, target_index - first_value))
+                prev_index_value = max(0, min(prev_index_value - a[j], a[j] - prev_index_value))
+            cur_index_value = max(0, max(cur_index_value - prev_index_value, prev_index_value - cur_index_value))
 
         # Calculate right modification
-        if i < n - 1:
-            m = a[i + 1]
-            for j in range(i + 2, n):
-                m = max(0, min(m - a[j], a[j] - m))
-            first_value = max(0, max(first_value - m, m - first_value))
+        if i < len(a) - 1:
+            next_index_value = a[i + 1]
+            for j in range(i + 2, len(a)):
+                next_index_value = max(0, min(next_index_value - a[j], a[j] - next_index_value))
+            cur_index_value = max(0, max(cur_index_value - next_index_value, next_index_value - cur_index_value))
 
-        max_result = max(max_result, first_value)
+        max_result = max(max_result, cur_index_value)
 
     return max_result
-
 
 # Reading input
 t = int(input())  # Number of test cases

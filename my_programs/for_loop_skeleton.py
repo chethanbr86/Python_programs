@@ -24,9 +24,17 @@
 #     print(sub_list)    
 
 #checking reverse index in for loop
-list_b = [1,2,3,4,5,6,7,8]
+list_b = [11,12,13,14,15,16,17,18]
 
 for i in range(len(list_b)):
     for j in range(i-2,-1,-1):
-        print(f'i:{i}, j:{j}')
+        print(f'i:{i}, value_at_i: {list_b[i]}, j:{j}, value_at_j: {list_b[j]}')
 
+#Same like above with same solution (only for i), see the difference in code 
+# for i in range(len(list_b)):
+#     for j in range(i-1,0,-1):
+#         print(f'i:{i}, value_at_i: {list_b[i]}, j:{j}, value_at_j: {list_b[j]}')
+
+# my_list = [11,12,13,14,15,16,17]
+# for i in range(len(my_list)-1, -1, -1):
+#     print(i, my_list[i])
