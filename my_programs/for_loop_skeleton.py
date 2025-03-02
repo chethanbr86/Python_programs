@@ -24,11 +24,11 @@
 #     print(sub_list)    
 
 #checking reverse index in for loop
-list_b = [11,12,13,14,15,16,17,18]
+list_b = [11,22,43,41,25]
 
-for i in range(len(list_b)):
-    for j in range(i-2,-1,-1):
-        print(f'i:{i}, value_at_i: {list_b[i]}, j:{j}, value_at_j: {list_b[j]}')
+# for i in range(len(list_b)):
+#     for j in range(i-2,-1,-1):
+#         print(f'i:{i}, value_at_i: {list_b[i]}, j:{j}, value_at_j: {list_b[j]}')
 
 #Same like above with same solution (only for i), see the difference in code 
 # for i in range(len(list_b)):
@@ -38,3 +38,21 @@ for i in range(len(list_b)):
 # my_list = [11,12,13,14,15,16,17]
 # for i in range(len(my_list)-1, -1, -1):
 #     print(i, my_list[i])
+
+#sum of sub-array - not sure if its right
+# def sum_array(list_b, i, j):
+#     total = 0
+#     for k in range(i, j+1):
+#         total = total + list_b[i]
+#     return total
+
+# print(sum_array(list_b, 2, 5))
+
+#Difference between adjacent elements
+diff_list = []
+def prefix_sum(list_b):
+    for i in range(1,len(list_b)):
+        diff_list.append(list_b[i] - list_b[i-1])
+    return diff_list
+
+print(prefix_sum(list_b))
