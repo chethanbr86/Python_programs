@@ -13,7 +13,7 @@ class LinkedList: #LinkedList is another class which utilizes the Node class
     def __repr__(self):
         pass
 
-    def __contains__(self):
+    def __contains__(self): #checks if a value exists in the list
         pass
 
     def __len__(self):
@@ -24,19 +24,20 @@ class LinkedList: #LinkedList is another class which utilizes the Node class
         if self.head is None: #setting head to new node if there is nothing in the list
             self.head = Node(value)
         else: #if there is a head already then going to next element
-            last = self.head
+            last = self.head #if there is a head, make last element to be the head
             while last.next: #as long as there is next element
-                last = last.next
-            last.next = Node(value) #if last element 
+                last = last.next #now last is next element, one after head
+            last.next = Node(value) #inserting value there 
 
     #o(1) - constant time
     def prepend(self, value):
-        first_node = Node(value) #first_node is a node with value before which a value needs to be prepend
+        first_node = Node(value) #first_node is a node with value which is appended before head (and head can be None or contain a value)
         first_node.next = self.head 
         self.head = first_node
 
-    def insert(self, value, index):
-        pass
+    def insert(self, value, index): #inserting value at a specific index
+        if index == 0: #If inserting at empty list
+            self.prepend(value) #you can append also but it will have O(n) time complexity
 
     def delete(self, value):
         pass
