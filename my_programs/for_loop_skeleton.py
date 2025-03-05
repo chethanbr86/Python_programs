@@ -24,7 +24,9 @@
 #     print(sub_list)    
 
 #checking reverse index in for loop
+list_a = 'faghklmaddiddedd'
 list_b = [11,22,43,41,25]
+v = ['a','e','i','o','u']
 
 # for i in range(len(list_b)):
 #     for j in range(i-2,-1,-1):
@@ -49,10 +51,19 @@ list_b = [11,22,43,41,25]
 # print(sum_array(list_b, 2, 5))
 
 #Difference between adjacent elements
-diff_list = []
-def prefix_sum(list_b):
-    for i in range(1,len(list_b)):
-        diff_list.append(list_b[i] - list_b[i-1])
-    return diff_list
+# diff_list = []
+# def prefix_sum(list_b):
+#     for i in range(1,len(list_b)):
+#         diff_list.append(list_b[i] - list_b[i-1])
+#     return diff_list
 
-print(prefix_sum(list_b))
+# print(prefix_sum(list_b))
+
+# for i in range(0,len(list_a)-len(list_a)+3):
+for i in list_a[:4]:
+    if i in v:  
+        print('yes',list_a[:4])
+    else:
+        print('no')
+
+# print(range(0,len(list_a)-len(list_a)+3))
