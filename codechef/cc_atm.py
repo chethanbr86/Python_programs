@@ -40,7 +40,6 @@
 
 #with condition - accepted
 t = int(input())
-
 while t:     
     t -= 1    
     no_of_person, money_units = list(map(int,input().split()))

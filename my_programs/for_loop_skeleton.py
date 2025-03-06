@@ -12,21 +12,33 @@
 #     print(i,j)
 
 # 3rd type:
-# l3 = [5,6,7]
+l3 = [2, 3, 4, 4, 6, 7]
 
-# for i in l3:
-#     for j in l3:
-#         print(i,j)
+for i in l3:
+    for j in l3:
+        print(i,j)
 
+# 4th
+List = [2, 3, 4, 4, 6, 7]
+for i,j in enumerate(List):
+    print(i,List[i],j)
+
+# 5th
 # IMP: Making nested list into separate lists
 # for i in range(len(list_a)):
 #     sub_list = list_a[i]
 #     print(sub_list)    
 
+# 6th
+#Making nested sublists into single list
+# for i in range(len(list_a)-1):
+#     List = [item for sublist in list_a for item in sublist]
+# print(List)
+
 #checking reverse index in for loop
 
 #list_b = [11,22,43,41,25]
-v = ['a','e','i','o','u']
+# v = ['a','e','i','o','u']
 
 # for i in range(len(list_b)):
 #     for j in range(i-2,-1,-1):
@@ -75,20 +87,22 @@ v = ['a','e','i','o','u']
 #     print('no')
 
 # print(list_a[:3])
-list_a = 'faghiklmaddidded'#,'faghklmaddiddedd'
-count = 0
-for i in list_a:
-    if i not in v:
-        # print(i)
-        count += 1
-        # print(count)
-        if count >= 4:
-            print('No')
-            break  
-    else:
-        # print(i)
-        count = 0
-        # print(count)
-else:
-    print('Yes')    
+# list_a = 'faghiklmaddidded'#,'faghklmaddiddedd'
+# count = 0
+# for i in list_a:
+#     if i not in v:
+#         # print(i)
+#         count += 1
+#         # print(count)
+#         if count >= 4:
+#             print('No')
+#             break  
+#     else:
+#         # print(i)
+#         count = 0
+#         # print(count)
+# else:
+#     print('Yes')    
 # print(count)
+
+
