@@ -24,8 +24,8 @@
 #     print(sub_list)    
 
 #checking reverse index in for loop
-list_a = 'faghklmaddiddedd'
-list_b = [11,22,43,41,25]
+
+#list_b = [11,22,43,41,25]
 v = ['a','e','i','o','u']
 
 # for i in range(len(list_b)):
@@ -74,4 +74,21 @@ v = ['a','e','i','o','u']
 #     # else:
 #     print('no')
 
-print(list_a[:3])
+# print(list_a[:3])
+list_a = 'faghiklmaddidded'#,'faghklmaddiddedd'
+count = 0
+for i in list_a:
+    if i not in v:
+        # print(i)
+        count += 1
+        # print(count)
+        if count >= 4:
+            print('No')
+            break  
+    else:
+        # print(i)
+        count = 0
+        # print(count)
+else:
+    print('Yes')    
+# print(count)
