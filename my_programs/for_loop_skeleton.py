@@ -11,17 +11,50 @@
 # for i,j in enumerate(l2):
 #     print(i,j)
 
-# 3rd type:
-l3 = [2, 3, 4, 4, 6, 7]
+# 3rd type-1:
+# l3 = [2, 3, 4, 4, 6, 7]
 
-for i in l3:
-    for j in l3:
-        print(i,j)
+# for i in l3:
+#     for j in l3:
+#         print(i,j)
+
+# 3rd type-2:
+# l3 = [12, 13, 14, 14, 16, 17]
+
+# for i in range(len(l3)):
+#     for j in range(i):
+#         print(i,j,l3[i],l3[j])
+
+# 3rd type-3:
+# l3 = [12, 13, 14, 14, 16, 17]
+
+# repeated = []
+# missing = []
+# for i in range(len(l3)):
+#     for j in range(i):
+#         if l3[i] == l3[j]:
+#             repeated.append(l3[i])
+#         if l3[i] - l3[j] != 1:
+#             missing.append((l3[i-1]+l3[j-1]/2)) #repeated working, missing not working
+# print(repeated,missing)
+
+# 3rd -type 4:
+l3 = [12, 13, 14, 14, 16, 17]
+
+rep_miss = []
+
+for i in range(1,len(l3)):
+   if l3[i] == l3[i-1]:
+      rep_miss.append(l3[i])
+   if l3[i]-l3[i-1] > 1 or l3[i]-l3[i-1] < 0:
+      rep_miss.append(int((l3[i]+l3[i-1])/2))
+print(rep_miss)
+
 
 # 4th
-List = [2, 3, 4, 4, 6, 7]
-for i,j in enumerate(List):
-    print(i,List[i],j)
+# List = [2, 3, 4, 4, 6, 7]
+# for i,j in enumerate(List):
+#     print(i,List[i],j)
 
 # 5th
 # IMP: Making nested list into separate lists
