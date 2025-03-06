@@ -60,10 +60,18 @@ v = ['a','e','i','o','u']
 # print(prefix_sum(list_b))
 
 # for i in range(0,len(list_a)-len(list_a)+3):
-for i in list_a[:4]:
-    if i in v:  
-        print('yes',list_a[:4])
-    else:
-        print('no')
+# for i in list_a[:4]:
+#     if i in v:  
+#         print('yes',i)
+#     else:
+#         print('no')
 
 # print(range(0,len(list_a)-len(list_a)+3))
+# for i in list_a[:4]:
+#     if i in v:
+#         print(i)
+#         break
+#     # else:
+#     print('no')
+
+print(list_a[:3])
