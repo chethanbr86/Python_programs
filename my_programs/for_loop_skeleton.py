@@ -39,16 +39,16 @@
 # print(repeated,missing)
 
 # 3rd -type 4:
-l3 = [12, 13, 14, 14, 16, 17]
+# l3 = [12, 13, 14, 14, 16, 17]
 
-rep_miss = []
+# rep_miss = []
 
-for i in range(1,len(l3)):
-   if l3[i] == l3[i-1]:
-      rep_miss.append(l3[i])
-   if l3[i]-l3[i-1] > 1 or l3[i]-l3[i-1] < 0:
-      rep_miss.append(int((l3[i]+l3[i-1])/2))
-print(rep_miss)
+# for i in range(1,len(l3)):
+#    if l3[i] == l3[i-1]:
+#       rep_miss.append(l3[i])
+#    if l3[i]-l3[i-1] > 1 or l3[i]-l3[i-1] < 0:
+#       rep_miss.append(int((l3[i]+l3[i-1])/2))
+# print(rep_miss)
 
 
 # 4th
@@ -138,4 +138,10 @@ print(rep_miss)
 #     print('Yes')    
 # print(count)
 
-
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    grid = []
+    while len(grid) != n:
+      grid.append(list(map(int, input().split())))
+print(grid)
