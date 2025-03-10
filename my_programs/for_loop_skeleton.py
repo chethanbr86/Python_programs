@@ -138,10 +138,30 @@
 #     print('Yes')    
 # print(count)
 
-t = int(input())
-for _ in range(t):
-    n = int(input())
-    grid = []
-    while len(grid) != n:
-      grid.append(list(map(int, input().split())))
-print(grid)
+# Taking input for 9 elements with 3 sublists
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     grid = []
+#     while len(grid) != n:
+#         sublist = list(map(int, input().split()))
+#         if len(sublist) != n:
+#             print('Error: Length of sublist does not match n')
+#             continue
+#         grid.append(sublist)
+#     print(grid)
+
+List = [2,3,4]
+rep_miss2 = []
+def missing():
+    for i in range(1,len(List)):
+        if List[i]-List[i-1] > 1 or List[i]-List[i-1] < 0:
+            rep_miss2.append(int((List[i]+List[i-1])/2))
+    if len(rep_miss2) == 0:
+        if List[0]-1 != 0:
+            rep_miss2.append(List[0]-1)
+        else:
+            rep_miss2.append(List[i]+1)
+    return rep_miss2
+print(missing())
+#but doesn't work if 1 is missing
