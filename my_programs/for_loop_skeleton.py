@@ -159,9 +159,8 @@ def missing():
             rep_miss2.append(int((List[i]+List[i-1])/2))
     if len(rep_miss2) == 0:
         if List[0]-1 != 0:
-            rep_miss2.append(List[0]-1)
+            rep_miss2.append(List[0]-1) #previous index as long as value is not 0
         else:
             rep_miss2.append(List[i]+1)
     return rep_miss2
 print(missing())
-#but doesn't work if 1 is missing
