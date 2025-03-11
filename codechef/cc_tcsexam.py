@@ -1,5 +1,22 @@
 def Winner(d,s):
-    pass
+    total_d = 0
+    total_s = 0
+    for i in d:
+        total_d = total_d + i
+    for j in s:
+        total_s = total_s + j
+
+    if total_d != total_s:
+        if total_d > total_s:
+            print('Dragon')
+        else:
+            print('Sloth')
+
+    else:
+        pass
+
+    
+
 
 t = int(input())
 for _ in range(t):
