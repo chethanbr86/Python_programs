@@ -5,22 +5,16 @@ list2 = [0.891260,0.725591,0.863516,0.875115,0.864161,0.885342,0.892017,0.872830
 '''Need 2 outputs from 2 lists where difference between corresponding index values are least but the first value is greater than second and first value has a better score if not highest.
 Meaning 1st priority is least difference and 2nd priority is highest value'''
 
-def biggest_value(List):
-    for i in range(1,len(List)):
-        if List[i] == float(1):
-            i += 1
-        else:
-            pass
-
-        
+   
 
 list3 = []
-for i in range(1,len(list1)):
-    for j in range(len(list2)):
-        if list1[i] < list2[j]:
-            list1[i] += 1
-            list2[j] += 1
+for i in range(len(list1)-1):
+    for j in range(len(list2)-1):
+        if list1[i] < list2[j] or list1[i] == 1:
+            i += 1
+            j += 1
         else:
-
-            list3.append([list1[i],list2[j]])
+            if i == j:
+                list3.append([list1[i],list2[j]])
+            # break
 print(list3)
