@@ -37,4 +37,6 @@ def fact2(n):
         return f
 
 print(fact2(5))
+
+#Try using while
         
