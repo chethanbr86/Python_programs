@@ -38,5 +38,5 @@ def fact2(n):
 
 print(fact2(5))
 
-#Try using while
+#Try using while loop for factorial
         
