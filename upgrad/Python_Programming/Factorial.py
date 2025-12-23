@@ -38,5 +38,17 @@ def fact2(n):
 
 print(fact2(5))
 
-#Try using while loop for factorial
-        
+#4th method:
+def fact3(n):
+    f = 1
+    if n < 0:
+        return -1
+    elif n == 0:
+        return 1
+    else:
+        while n > 0:
+            f = f * n
+            n = n - 1
+        return f
+
+print(fact3(5))
