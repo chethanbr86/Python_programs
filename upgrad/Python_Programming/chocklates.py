@@ -20,3 +20,44 @@ while w//3 != 0: #Until chocklate wrappers left is not equal to zero, (see if w/
     choc = choc + w//3 #Total number of chocklates first purchased and then exchanged with wrappers
     w = w//3 + w%3
 print(f'Total number of chocklates Sanjay can eat: {choc}')
+
+
+#Another variation:
+'''
+Explanation:
+
+Sanjay has 15 rupees, buys 7 chocolates for 2 rupees each.
+
+Sanjay now has 7 wrappers, exchanges 6 of them for 2 more chocolates.
+
+Sanjay now has 3 wrappers and exchanges them for 1 more chocolate making a total of 10 chocolates
+
+
+
+Sample input:
+
+15, 2, 3, 2
+
+
+
+Sample output:
+
+17
+'''
+
+#take input here
+ch_money = input()
+my_list = ch_money.split(',')
+m = int(my_list[0])
+c = int(my_list[1])
+w = int(my_list[2])
+k = int(my_list[3])
+
+#start writing your code here
+no_choc = m//c
+wrapper = m//c
+
+while wrapper >= w:
+    no_choc = no_choc + (wrapper//w)*k
+    wrapper = (wrapper//w)*k + wrapper%w
+print(no_choc)

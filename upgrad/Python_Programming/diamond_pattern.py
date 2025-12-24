@@ -37,3 +37,24 @@ if 1<=n<=20:
         for k in range(i-1):
             print('*_',end='')
         print('*')
+
+'''
+--------e-------- 
+------e-d-e------ 
+----e-d-c-d-e---- 
+--e-d-c-b-c-d-e-- 
+e-d-c-b-a-b-c-d-e 
+--e-d-c-b-c-d-e-- 
+----e-d-c-d-e---- 
+------e-d-e------ 
+--------e-------- 
+'''
+
+n = int(input())
+
+# Write your code below
+alpha = 'abcdefghijklmnopqrstuvwxyz'[0:n]
+for i in range(n-1,-n,-1):
+    x=abs(i)
+    line = alpha[n:x:-1] + alpha[x:n]
+    print('--'*x + '-'.join(line) + '--'*x)
