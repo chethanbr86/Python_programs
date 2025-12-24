@@ -33,7 +33,7 @@ def fact2(n):
     elif n==0:
         return 1
     else:
-        f = n* fact2(n-1)
+        f = n* fact2(n-1) #recurssion
         return f
 
 print(fact2(5))
