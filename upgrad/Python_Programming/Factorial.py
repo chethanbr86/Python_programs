@@ -11,7 +11,7 @@ else:
     fact0 = reduce(lambda x,y: x*y, range(1,n+1))
     print(fact0) 
 
-#2nd method:
+#2nd method: upgrad method
 def fact1(n):
     f = 1
     if n < 0:
@@ -25,7 +25,7 @@ def fact1(n):
 
 print(fact1(5)) 
 
-#3rd method:
+#3rd method: recurssion 
 def fact2(n):
     f = 1
     if n < 0:
@@ -33,7 +33,7 @@ def fact2(n):
     elif n==0:
         return 1
     else:
-        f = n* fact2(n-1) #recurssion
+        f = n* fact2(n-1) 
         return f
 
 print(fact2(5))
