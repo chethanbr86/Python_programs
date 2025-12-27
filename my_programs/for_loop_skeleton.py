@@ -19,11 +19,11 @@
 #         print(i,j)
 
 # 3rd type-2:
-# l3 = [12, 13, 14, 14, 16, 17]
+l3 = [12, 13, 14, 14, 16, 17]
 
-# for i in range(len(l3)):
-#     for j in range(i):
-#         print(i,j,l3[i],l3[j])
+for i in range(len(l3)):
+    for j in range(i):
+        print(i,j,l3[i],l3[j])
 
 # 3rd type-3:
 # l3 = [12, 13, 14, 14, 16, 17]
@@ -151,16 +151,30 @@
 #         grid.append(sublist)
 #     print(grid)
 
-List = [2,3,4]
-rep_miss2 = []
-def missing():
-    for i in range(1,len(List)):
-        if List[i]-List[i-1] > 1 or List[i]-List[i-1] < 0:
-            rep_miss2.append(int((List[i]+List[i-1])/2))
-    if len(rep_miss2) == 0:
-        if List[0]-1 != 0:
-            rep_miss2.append(List[0]-1) #previous index as long as value is not 0
-        else:
-            rep_miss2.append(List[i]+1)
-    return rep_miss2
-print(missing())
+# List = [2,3,4]
+# rep_miss2 = []
+# def missing():
+#     for i in range(1,len(List)):
+#         if List[i]-List[i-1] > 1 or List[i]-List[i-1] < 0:
+#             rep_miss2.append(int((List[i]+List[i-1])/2))
+#     if len(rep_miss2) == 0:
+#         if List[0]-1 != 0:
+#             rep_miss2.append(List[0]-1) #previous index as long as value is not 0
+#         else:
+#             rep_miss2.append(List[i]+1)
+#     return rep_miss2
+# print(missing())
+
+# test_list = [8,9,2,2,3,4,5,2]
+
+# for i in range(len(test_list)):
+#     print(i-1,i,test_list[i-1],test_list[i]) 
+# #Here test_list[i-1] and test_list[i] indicates the index swapping eventhough it points at value
+
+# print('----------------------------')
+
+# for i,j in enumerate(test_list):
+#     print(i-1,i,j-1,j) 
+# #Here j-1 and j indicates the value and hence -1 subtracts 1 from value not index as above
+
+# print('----------------------------')
