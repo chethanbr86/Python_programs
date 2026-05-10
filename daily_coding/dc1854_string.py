@@ -41,4 +41,4 @@ print('Yes',str_set[j:],i,j)
         #     print('No')
 print(count_inner)
 print(count_outer)
-#This one actually works but not as the problem wanted, check once.
+#This one actually works but not as the problem wanted, check once. But still got it right without help.
