@@ -12,17 +12,17 @@
 # Test case 3: N=1, A=[3]
 
 # Read the number of test cases
-T = int(input().strip())
+# T = int(input().strip())
 
-for _ in range(T):
-    # Read the size of the array
-    N = int(input().strip())
+# for _ in range(T):
+#     # Read the size of the array
+#     N = int(input().strip())
     
-    # Read the array as a list of integers
-    A = list(map(int, input().strip().split(',')))
+#     # Read the array as a list of integers
+#     A = list(map(int, input().strip().split(',')))
     
-    # Process the input (Example: Print the array)
-    print(f"Test case {_+1}: N={N}, A={A}")
+#     # Process the input (Example: Print the array)
+#     print(f"Test case {_+1}: N={N}, A={A}")
 
 
 #2
@@ -47,3 +47,11 @@ for _ in range(T):
 #     print(S1,S2,S3)
 #     print(f'T_Dragon {T_Dragon}')
 #     print(f'T_Sloth {T_Sloth}')
+
+#for loop lesson
+a = [1,2,3,4]
+# for i in a:
+#     print(i)
+for i in range(len(a)):
+    print(f'index = {i}')
+    print(f'value = {a[i]}') #its not i[0]
